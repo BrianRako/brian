@@ -19,7 +19,7 @@
             <p class="text-gray-500 mb-0">It looks like you found a glitch in the matrix...</p>
             <a href="index.html">&larr; Back to Dashboard</a>
           </div>
-        <p>test</p>
+
         </div>
 	
 </body>
