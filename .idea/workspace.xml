@@ -13,8 +13,12 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="ProjectId" id="1lgmcI9YADRUQk5BSSCPby68qYA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -59,6 +63,7 @@
       <workItem from="1608027188893" duration="14119000" />
       <workItem from="1608071004778" duration="4994000" />
       <workItem from="1608135827985" duration="1222000" />
+      <workItem from="1608141938763" duration="361000" />
     </task>
     <servers />
   </component>
