@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45e9f2a5-b095-4e52-abb3-29b2a705be23" name="Default Changelist" comment="Site" />
+    <list default="true" id="45e9f2a5-b095-4e52-abb3-29b2a705be23" name="Default Changelist" comment="Site">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/404/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/404/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cour.php" beforeDir="false" afterPath="$PROJECT_DIR$/cour.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/user.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +47,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
     <property name="settings.editor.splitter.proportion" value="0.23727088" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -65,7 +70,9 @@
       <workItem from="1608135827985" duration="1222000" />
       <workItem from="1608141938763" duration="361000" />
       <workItem from="1608142746535" duration="789000" />
-      <workItem from="1608144223798" duration="236000" />
+      <workItem from="1608144223798" duration="1746000" />
+      <workItem from="1608197268242" duration="1963000" />
+      <workItem from="1608200550197" duration="5074000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1608142849439</created>
@@ -88,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608144419242</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Site">
+      <created>1608144543864</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608144543864</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,5 +124,9 @@
     <MESSAGE value="test" />
     <MESSAGE value="Site" />
     <option name="LAST_COMMIT_MESSAGE" value="Site" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
