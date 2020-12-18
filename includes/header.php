@@ -130,11 +130,14 @@ if(!isset($_SESSION))
   </i><span class="sr-only"></span><span class="c-sidenav__description"></span></button>
   <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon fas fa-home fa-lg" aria-hidden="true"> 
   <span class="side_title">Accueil</span></i><span class="c-sidenav__description">Accueil</span></a>
-  <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon"><img class=" badges steam" src="http://127.0.0.1/site/images/icons/steam.svg">
+  <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon ">
+          <img class=" badges steam" src="http://127.0.0.1/site/images/icons/steam.png">
   <span class="side_title">Steam</span></i><span class="c-sidenav__description">Steam</span></a>
-    <a class="c-sidenav__link" href="#"><img class="c-sidenav__icon badges origin" src="http://127.0.0.1/site/images/icons/origin.svg">
-    <span class="side_title">Origin</span></img><span class="c-sidenav__description">Origin</span></a>
-    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon badges rockstar" aria-hidden="true">
+    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon">
+            <img class="c-sidenav__icon badges origin" src="http://127.0.0.1/site/images/icons/origin.png">
+    <span class="side_title">Origin</span></i><span class="c-sidenav__description">Origin</span></a>
+    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon" aria-hidden="true">
+            <img class="badges rockstar" src="http://127.0.0.1/site/images/icons/rockstar.png" alt="">
     <span class="side_title">Rockstar</span></i><span class="c-sidenav__description">Rockstar</span></a>
     <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon badges xbox" aria-hidden="true">
     <span class="side_titles">Xbox</span></i><span class="c-sidenav__description">Xbox</span></a>

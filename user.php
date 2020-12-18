@@ -24,7 +24,8 @@ class Moto
         return $this->brand.' '.$this->color.' ayant une vitesse maximale de '.$this->maxSpeed.'km/h'.BR;
     }
 
-    /**  public function __destruct()
+    /**
+    public function __destruct()
     {
         echo $this->brand . ' ' . $this->color . ' rentre au garage' . BR;
     }

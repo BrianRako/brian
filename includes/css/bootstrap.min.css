@@ -51,6 +51,7 @@ body {
           align-items: center;
   height: 50px;
   width: 16rem;
+    margin-bottom: 5px;
 }
 .c-sidenav__link:hover,
 .c-sidenav__link:focus {
@@ -77,8 +78,9 @@ body {
     font-size: 11px;
 
 }
+.color_bak {
 
-
+}
 
 .prix {
     position: absolute;
@@ -182,59 +184,52 @@ padding: 0 10px;
     left: 2.2rem;
     top: -.2rem;
     width: 57px;
-
 }
-
-
 
 .bottom_bar {
     margin-top: 10px;
     font-weight: 500;
 }
+
 .bottom_bar ul li {
     line-height: 1.2rem;
 }
 
 .badges.steam {
-    width: 52px;
 }
+
 .badges.origin {
-    width: 35px;
-
 }
+
 .badges.rockstar {
-
 }
+
 .badges.xbox {
-
-
 }
+
 .badges.indies {
-
 }
+
 .badges.uplay {
-
 }
+
 .badges.battlenet {
-
 }
+
 .badges.nintendo {
-
 }
+
 .badges.playstation {
-
 }
+
 .badges.autres {
 
 }
 
-
-
-
 .badges {
-  border-radius: 100%;
-  background-repeat: no-repeat;
-    background-size: 35px;
+    background-repeat: no-repeat;
+        background-size: 35px;
+    width: 30px;
 }
 
 

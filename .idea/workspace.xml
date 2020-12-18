@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45e9f2a5-b095-4e52-abb3-29b2a705be23" name="Default Changelist" comment="Site">
+    <list default="true" id="45e9f2a5-b095-4e52-abb3-29b2a705be23" name="Default Changelist" comment="add class User">
+      <change afterPath="$PROJECT_DIR$/images/icons/origin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/icons/rockstar.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/404/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cour.php" beforeDir="false" afterPath="$PROJECT_DIR$/cour.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icons/origin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icons/steam.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +76,9 @@
       <workItem from="1608142746535" duration="789000" />
       <workItem from="1608144223798" duration="1746000" />
       <workItem from="1608197268242" duration="1963000" />
-      <workItem from="1608200550197" duration="5074000" />
+      <workItem from="1608200550197" duration="7318000" />
+      <workItem from="1608232250751" duration="2974000" />
+      <workItem from="1608241432669" duration="2766000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1608142849439</created>
@@ -102,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608144543864</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add class User">
+      <created>1608206370750</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608206370750</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,7 +136,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
     <MESSAGE value="Site" />
-    <option name="LAST_COMMIT_MESSAGE" value="Site" />
+    <MESSAGE value="add class User" />
+    <option name="LAST_COMMIT_MESSAGE" value="add class User" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
