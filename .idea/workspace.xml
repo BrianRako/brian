@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45e9f2a5-b095-4e52-abb3-29b2a705be23" name="Default Changelist" comment="add class User">
-      <change afterPath="$PROJECT_DIR$/images/icons/origin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/icons/rockstar.png" afterDir="false" />
+    <list default="true" id="45e9f2a5-b095-4e52-abb3-29b2a705be23" name="Default Changelist" comment="Ajout images">
+      <change afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icons/origin.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icons/steam.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/bdd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cour.php" beforeDir="false" afterPath="$PROJECT_DIR$/cour.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/css/bootstrap.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/user.php" afterDir="false" />
@@ -27,7 +26,9 @@
   </component>
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="ProjectId" id="1lgmcI9YADRUQk5BSSCPby68qYA" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -51,7 +52,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
     <property name="settings.editor.splitter.proportion" value="0.23727088" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -78,7 +79,13 @@
       <workItem from="1608197268242" duration="1963000" />
       <workItem from="1608200550197" duration="7318000" />
       <workItem from="1608232250751" duration="2974000" />
-      <workItem from="1608241432669" duration="2766000" />
+      <workItem from="1608241432669" duration="2836000" />
+      <workItem from="1608283101744" duration="10084000" />
+      <workItem from="1608300929372" duration="6290000" />
+      <workItem from="1608327572417" duration="2942000" />
+      <workItem from="1608333104181" duration="127000" />
+      <workItem from="1608383518073" duration="2753000" />
+      <workItem from="1608389825304" duration="2161000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1608142849439</created>
@@ -115,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608206370750</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Ajout images">
+      <created>1608252011288</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608252011288</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +151,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="Site" />
     <MESSAGE value="add class User" />
-    <option name="LAST_COMMIT_MESSAGE" value="add class User" />
+    <MESSAGE value="Ajout images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout images" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

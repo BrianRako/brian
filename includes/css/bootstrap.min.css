@@ -14,7 +14,7 @@ body {
 }
 .c-sidenav {
   background: #2b2b2c;
-  height: 100vh;
+  height: 100%;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -25,10 +25,13 @@ body {
   transition: 0.2s ease-in-out;
   overflow: hidden;
   position: fixed;
-  top: 7.9rem;
+  top: 0;
+    bottom: 0;
+
 }
 .c-sidenav--is-open {
   width: 16rem;
+    overflow-y: scroll;
 }
 .c-sidenav__opener {
   background: #5f5f61;
@@ -51,7 +54,7 @@ body {
           align-items: center;
   height: 50px;
   width: 16rem;
-    margin-bottom: 5px;
+    padding-bottom: 10px;
 }
 .c-sidenav__link:hover,
 .c-sidenav__link:focus {
@@ -72,13 +75,26 @@ body {
   visibility: visible;
   -webkit-transform: translateX(0);
           transform: translateX(0);
+    padding-top: 10px;
 }
-.side_title {
-    display: block !important;
+.c-sidenav__title{
+    display: block ;
     font-size: 11px;
+}
+.c-sidenav--is-open .c-sidenav__title {
+    display: none;
+}
+
+.c-sidenav__genre  {
+    font-size: 13px;
+    list-style: none;
+    margin-top: 20px;
+    padding-inline-start: 0;
 
 }
-.color_bak {
+
+.c-sidenav__genre li {
+   margin-left: 20px;
 
 }
 
@@ -195,6 +211,20 @@ padding: 0 10px;
     line-height: 1.2rem;
 }
 
+
+.badges.arrow{
+    -webkit-transition-duration: .2s;
+
+}
+.c-sidenav--is-open .badges.arrow
+{
+    transform: rotate(180deg);
+    margin-top: 17px;
+}
+.separator {
+    margin-top: 75px;
+}
+
 .badges.steam {
 }
 
@@ -230,6 +260,7 @@ padding: 0 10px;
     background-repeat: no-repeat;
         background-size: 35px;
     width: 30px;
+    padding-top: 10px;
 }
 
 
@@ -5007,6 +5038,9 @@ input[type=submit].btn-block {
 
 .tab-content>.active {
     display: block
+}
+.expand-top {
+    margin-top: 127px;
 }
 
 .navbar {

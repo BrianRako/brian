@@ -1,11 +1,11 @@
 <?php
 
-// Fichier index.php
 
 require_once 'user.php';
 
-$kawa = new Moto('Kawasaki', 'rouge', '217');
-$bm = new Moto('BMW', 'bleue', '210');
+$tesla = new ElectricsCar(50000, 'Tesla', 560);
+$renault = new GasolineCar(20000, 'Renault', 100);
 
-$race = new Race($kawa, $bm);
-echo $race->StartRace()->getDescription();
+DisplayedGetCharacteristics($tesla);
+DisplayedGetCharacteristics($renault);
+

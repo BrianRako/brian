@@ -114,45 +114,91 @@ if(!isset($_SESSION))
 </nav>
 <!-- Navbar -->
 
-<div class="jumbotron color-grey-light mt-70">
-  <div class="d-flex align-items-center h-100">
-    <div class="container text-center py-5">
-      <h1 class="mb-3"></h1>
-      <p class="mb-0"></p>
-    </div>
-  </div>
-</div>
 
 
 
 <nav class="c-sidenav">
-  <button class="c-sidenav__opener c-sidenav__link"><i class="c-sidenav__icon fas fa-arrow-circle-right fa-lg" aria-hidden="true">
-  </i><span class="sr-only"></span><span class="c-sidenav__description"></span></button>
-  <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon fas fa-home fa-lg" aria-hidden="true"> 
-  <span class="side_title">Accueil</span></i><span class="c-sidenav__description">Accueil</span></a>
+
+
+    <div class="expand-top"></div>
+
+
+    <button class="c-sidenav__opener c-sidenav__link"><i class="c-sidenav__icon">
+          <img class="badges arrow" src="http://127.0.0.1/site/images/icons/arrow.png" alt="">
+
+
+
+
+
+      </i><span class="sr-only"></span><span class="c-sidenav__description"></span></button>
+  <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon">
+          <img class="badges home" src="http://127.0.0.1/site/images/icons/home.png" alt="">
+  <span class="c-sidenav__title">Accueil</span></i><span class="c-sidenav__description">Accueil</span></a>
+
   <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon ">
           <img class=" badges steam" src="http://127.0.0.1/site/images/icons/steam.png">
-  <span class="side_title">Steam</span></i><span class="c-sidenav__description">Steam</span></a>
+  <span class="c-sidenav__title">Steam</span></i><span class="c-sidenav__description">Steam</span></a>
+
     <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon">
             <img class="c-sidenav__icon badges origin" src="http://127.0.0.1/site/images/icons/origin.png">
-    <span class="side_title">Origin</span></i><span class="c-sidenav__description">Origin</span></a>
+    <span class="c-sidenav__title">Origin</span></i><span class="c-sidenav__description">Origin</span></a>
+
     <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon" aria-hidden="true">
             <img class="badges rockstar" src="http://127.0.0.1/site/images/icons/rockstar.png" alt="">
-    <span class="side_title">Rockstar</span></i><span class="c-sidenav__description">Rockstar</span></a>
-    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon badges xbox" aria-hidden="true">
-    <span class="side_titles">Xbox</span></i><span class="c-sidenav__description">Xbox</span></a>
-    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon badges indies" aria-hidden="true">
-    <span class="side_title">Indies</span></i><span class="c-sidenav__description">Indies</span></a>
-    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon badges uplay" aria-hidden="true">
-    <span class="side_title">Uplay</span></i><span class="c-sidenav__description">Uplay</span></a>
-    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon badges battlenet" aria-hidden="true">
-    <span class="side_title">Battle.net</span></i><span class="c-sidenav__description">Battle.net</span></a>
-    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon badges nintendo" aria-hidden="true">
-    <span class="side_title">Nintendo</span></i><span class="c-sidenav__description">Nintendo</span></a>
-    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon badges playstation" aria-hidden="true">
-    <span class="side_title">Playstation</span></i><span class="c-sidenav__description">Playstation</span></a>
-    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon badges autres" aria-hidden="true">
-    <span class="side_title">Autres</span></i><span class="c-sidenav__description">Autres</span></a>
+    <span class="c-sidenav__title">Rockstar</span></i><span class="c-sidenav__description">Rockstar</span></a>
+
+    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon">
+            <img  class="badges xbox" src="http://127.0.0.1/site/images/icons/xbox.png" alt="">
+    <span class="c-sidenav__title">Xbox</span></i><span class="c-sidenav__description">Xbox</span></a>
+
+    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon">
+            <img  class="badges indies" src="http://127.0.0.1/site/images/icons/indies.png" alt="">
+    <span class="c-sidenav__title">Indies</span></i><span class="c-sidenav__description">Indies</span></a>
+
+    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon">
+            <img  class="badges uplay" src="http://127.0.0.1/site/images/icons/uplay.png" alt="">
+    <span class="c-sidenav__title">Uplay</span></i><span class="c-sidenav__description">Uplay</span></a>
+
+    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon">
+            <img  class="badges battlenet" src="http://127.0.0.1/site/images/icons/battle.net.png" alt="">
+    <span class="c-sidenav__title">Battle.net</span></i><span class="c-sidenav__description">Battle.net</span></a>
+
+    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon">
+            <img class="badges nintendo" src="http://127.0.0.1/site/images/icons/nintendo.png" alt="">
+    <span class="c-sidenav__title">Nintendo</span></i><span class="c-sidenav__description">Nintendo</span></a>
+
+    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon">
+            <img class="badges playstation" src="http://127.0.0.1/site/images/icons/playstation.png" alt="">
+    <span class="c-sidenav__title">Playstation</span></i><span class="c-sidenav__description">Playstation</span></a>
+
+    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon">
+            <img class="badges autres" src="http://127.0.0.1/site/images/icons/autre.png" alt="">
+    <span class="c-sidenav__title">Autres</span></i><span class="c-sidenav__description">Autres</span></a>
+
+    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon">
+        </i><span class="c-sidenav__description">FPS</span></a>
+
+    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon">
+        </i><span class="c-sidenav__description">Action</span></a>
+
+    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon">
+        </i><span class="c-sidenav__description">Sport</span></a>
+
+    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon">
+        </i><span class="c-sidenav__description">Simulation</span></a>
+
+    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon">
+        </i><span class="c-sidenav__description">Multijoueur</span></a>
+
+    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon">
+        </i><span class="c-sidenav__description">Coopération</span></a>
+
+    <a class="c-sidenav__link" href="#"><i class="c-sidenav__icon">
+        </i><span class="c-sidenav__description">...</span></a>
+
+    <div class="separator"></div>
+
+
 </nav>
 
 <script type="text/javascript">
@@ -161,6 +207,7 @@ if(!isset($_SESSION))
 
 menuOpener.addEventListener("click", function () {
   menu.classList.toggle("c-sidenav--is-open");
+
 });
 
 </script>

@@ -1,16 +1,28 @@
 <?php
-// DB user
-$user =  'root';
-// DB pass
-$pass =  '';
+
+include_once 'config.php';
 
 
-try {
- 
- $bdd = new PDO('mysql:host=localhost;dbname=site;charset=utf8', $user, $pass);
-}
-catch (Exeption $e)
+
+class Database
 {
-    die('erreur :' .$e->getMessage());
+    public function connectDb()
+    {
+        try {
+
+            $bdd = new PDO('mysql:host='.DB_NAME.';dbname='.DB_NAME.';charset='.DB_CHARSET.'', DB_USER, DB_PASSWORD);
+        }
+        catch (Exeption $e)
+        {
+            die('erreur :' .$e->getMessage());
+        }
+    }
+
+    public function getDonnees(string $sql, string $params)
+    {
+
+
+    }
+
 }
-?>
+
