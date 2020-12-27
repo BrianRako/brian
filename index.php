@@ -1,5 +1,5 @@
 <?php 
-include('bdd.php');
+include('includes/class/bdd.php');
 
 if (isset($bdd)) {
     $req = $bdd->prepare('SELECT * FROM produit');

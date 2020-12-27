@@ -1,17 +1,27 @@
 <?php
 
-
-
-
-
 if (isset($_SESSION['id'])) {
     header('https://rakowitsch-brian.go.yj.fr/');
     exit;
 }
 
 include_once '../includes/class/login.php';
+include_once '../includes/class/bdd.php';
 
-$log = new Login();
+if (isset($_POST['formconnexion']))
+{
+	$userService = new UserService($bdd, $_POST['mail'], $_POST['mdp']);
+	if ($user_id = $userService->login()) {
+		echo 'Logged it as user id: '.$user_id;
+		$userData = $userService->getUser();
+		// do stuff
+	} else {
+		echo 'Invalid login';
+	}
+
+
+}
+
 
 ?>
 
