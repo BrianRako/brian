@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4c1a9657-f3b3-4f68-9730-7ebbf0d5999d" name="tpisuyll_site" url="http://88.211.101.188">
+        <fileTransfer rootFolder="/domains/rakowitsch-brian.educationhost.cloud" host="88.211.101.188" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="7f5b3547-f349-428f-ada4-d13d39a03fc5" name="site_planethost" url="http://node9-fr.n0c.com">
+        <fileTransfer host="node9-fr.n0c.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

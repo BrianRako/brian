@@ -1,67 +1,37 @@
 <?php
 
-require_once '../includes/header.php';
 
 
-require_once('../bdd.php');
+
 
 if (isset($_SESSION['id'])) {
-	header('location:http://127.0.0.1/site');
-	exit;
+    header('https://rakowitsch-brian.go.yj.fr/');
+    exit;
 }
 
-if(!empty($_POST)) {
-	extract($_POST);
-	$valid = true;
-}
+include_once '../includes/class/login.php';
 
-if (isset($_POST['formconnexion'])) {
-	$mail = htmlspecialchars($_POST['mail']);
-	$mdp = sha1($_POST['mdp']);
-
-
-	if (empty($mail) && empty($mdp)) {
-		$valid = false;
-		$erreur = "Veuillez remplir tous les champs";
-	}
-
-	$req = $bdd->prepare('SELECT * FROM utilisateurs WHERE mail = ? AND mdp = ?');
-	$req->execute(array($mail,$mdp));
-	$req = $req->fetch();
-
-	if ($req['id'] == "") {
-		$valid = false;
-		$erreur = "Adresse mail ou mot de passe incorrect";
-	}
-
-	if ($valid) {
-		$_SESSION['id'] = $req['id'];
-		$_SESSION['nom'] = $req['nom'];
-        $_SESSION['prenom'] = $req['prenom'];
-        $_SESSION['mail'] = $req['mail'];
-        $_SESSION['admin'] = $req['admin'];
-
-        header('location:http://127.0.0.1/site');
-        exit;
-
-	}
-}
+$log = new Login();
 
 ?>
 
 	<!DOCTYPE html>
 	<html>
 	<head>
-		<link href="http://localhost/site/includes/css/validetta.css" rel="stylesheet" type="text/css" media="screen" >
-		<link rel="stylesheet" href="http://127.0.0.1/site/includes/css/validetta.css">
+		<link href="https://rakowitsch-brian.go.yj.fr/includes/css/validetta.css" rel="stylesheet" type="text/css" media="screen" >
+		<link rel="stylesheet" href="https://rakowitsch-brian.go.yj.fr/includes/css/validetta.css">
 		<title>Connexion</title>
 
 	</head>
+    
+
 
 	<body>
+
+    <?php require_once '../includes/header.php'; ?>
 		<!--Main layout-->
 		<main>
-			<div class="container">
+			<div class="container log">
 
 				<!--Grid row-->
 				<div class="row d-flex justify-content-center">
@@ -106,7 +76,7 @@ if (isset($_POST['formconnexion'])) {
 
 									<button type="submit" name="formconnexion" class="btn btn-primary mb-4">Sign in</button>
 
-									<p>Pas encore inscrit ? <a href="http://127.0.0.1/site/inscription/">Inscrivez vous</a></p>
+									<p>Pas encore inscrit ? <a href="https://rakowitsch-brian.go.yj.fr/inscription/">Inscrivez vous</a></p>
 
 
 
@@ -135,12 +105,12 @@ if (isset($_POST['formconnexion'])) {
 	</body>
 
 
-	<script type="text/javascript" src="http://localhost/site/includes/js/popper.min.js"></script>
-	<script type="text/javascript" src="http://localhost/site/includes/js/bootstrap.js"></script>
-	<script type="text/javascript" src="http://localhost/site/includes/js/mdb.min.js"></script>
-	<script type="text/javascript" src="http://localhost/site/includes/js/mdb.ecommerce.min.js"></script>
-	<script type="text/javascript" src="http://localhost/site/includes/js/validettaLang-fr-FR.js"></script>
-	<script type="text/javascript" src="http://localhost/site/includes/js/validetta.js"></script>
+	<script type="text/javascript" src="https://rakowitsch-brian.go.yj.fr/includes/js/popper.min.js"></script>
+	<script type="text/javascript" src="https://rakowitsch-brian.go.yj.fr/includes/js/bootstrap.js"></script>
+	<script type="text/javascript" src="https://rakowitsch-brian.go.yj.fr/includes/js/mdb.min.js"></script>
+	<script type="text/javascript" src="https://rakowitsch-brian.go.yj.fr/includes/js/mdb.ecommerce.min.js"></script>
+	<script type="text/javascript" src="https://rakowitsch-brian.go.yj.fr/includes/js/validettaLang-fr-FR.js"></script>
+	<script type="text/javascript" src="https://rakowitsch-brian.go.yj.fr/includes/js/validetta.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready($("#formconnect").validetta());

@@ -1,9 +1,11 @@
     <?php
+    include_once('../bdd.php');
+    $bdd = new Mysql();
+    ?>
 
-    require_once("../includes/header.php"); 
 
-    include("../includes/bdd.php");
 
+ <?php
     if(isset($_GET['produit'])){
 
         $produit = $_GET['produit'];
@@ -24,16 +26,14 @@
             </div>
         </div>
 
+
+
         <?php
         
     }else{
-        
-        $reponse = $bdd->query('SELECT * FROM produit ORDER BY nom');
 
-        
-        while ($s = $reponse->fetch(PDO::FETCH_OBJ))
-        {
-            
+
+
             ?>
 
 
@@ -46,6 +46,9 @@
                 <title>Boutique</title>
             </head>
             <body>
+            <?php require_once("../includes/header.php"); ?>
+
+            <div class="all_page">
                 <!-- Grid row -->
                 <div class="row">
 
@@ -226,7 +229,7 @@
 </div>
 <!-- Grid row -->
 
-</section>
+
 <!--Section: Block Content-->
 
 
@@ -237,10 +240,11 @@
 
 <?php 
 
-}
+
 }
 
 ?>
+            </div>
 
 <script type="text/javascript" src="http://127.0.0.1/site/includes/js/popper.min.js"></script>
 <script type="text/javascript" src="http://127.0.0.1/site/includes/js/mdb.min.js"></script>
@@ -265,6 +269,7 @@
     });
   });
 </script>
+
 </body>
 </html>
 <!--Section: Block Content-->

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="SshConfigs">
     <configs>
-      <sshConfig authType="PASSWORD" host="svr2.educationhost.cloud" id="9ea59df8-82a1-4e40-b012-7fd1d5812d0e" port="22" nameFormat="DESCRIPTIVE" username="tpisuyll" />
+      <sshConfig authType="PASSWORD" host="node9-fr.n0c.com" id="9ea59df8-82a1-4e40-b012-7fd1d5812d0e" port="5022" nameFormat="DESCRIPTIVE" username="zmzugfwn" />
     </configs>
   </component>
 </project>

@@ -1,84 +1,57 @@
 <?php
 
 // Fichier User.php
-
 define('BR', '<br>');
 
-class Car
+
+class Moto
 {
-    public float $price;
     public string $brand;
+    public string $color;
+    public float $maxSpeed;
 
-    public function __construct(float $price, string $brand)
+
+    public function __construct(string $brand, string $color, float $maxSpeed)
     {
-        $this->price = $price;
-        $this->brand = $brand;
-
+        $this->brand    = $brand;
+        $this->color    = $color;
+        $this->maxSpeed = $maxSpeed;
+        
     }
 
-    public function getCharacteristics(): array
+    public function getDescription(): string
     {
-        return [
-            'price' => $this->price,
-            'brand' => $this->brand,
-
-        ];
+        return $this->brand.' '.$this->color.' ayant une vitesse maximale de '.$this->maxSpeed.'km/h'.BR;
     }
+
+    /**
+    public function __destruct()
+    {
+        echo $this->brand . ' ' . $this->color . ' rentre au garage' . BR;
+    }
+     */
+
 }
 
-class ElectricsCar extends Car
+
+class Race
 {
-    public float $autonomiebattery;
+    public moto $moto1;
+    public moto $moto2;
 
-    public function __construct(float $price, string $brand, float $autonomiebattery)
+    public function __construct(moto $moto1, moto $moto2)
     {
-        parent::__construct($price, $brand);
-        $this->autonomiebattery = $autonomiebattery;
+        $this->moto1 = $moto1;
+        $this->moto2 = $moto2;
+    
     }
 
-    public function getCharacteristics(): array
+    public function StartRace()
     {
-        $charasteristics = parent::getCharacteristics();
-        $charasteristics['autonomybattery'] = $this->autonomiebattery;
-
-        return $charasteristics;
-
-    }
-}
-
-class  GasolineCar extends Car
-{
-    public float $co2emission;
-
-    public function __construct(float $price, string $brand, float $co2emission)
-    {
-        parent::__construct($price, $brand);
-        $this->co2emission = $co2emission;
-    }
-
-    public function getCharacteristics(): array
-    {
-        $charasterictics =  parent::getCharacteristics();
-        $charasterictics['co2emission'] = $this->co2emission;
-
-        return $charasterictics;
+        if ($this->moto1->maxSpeed > $this->moto2->maxSpeed)
+        {
+            return $this->moto1;
+        }
+        return $this->moto2;
     }
 }
-
-function DisplayedGetCharacteristics(Car $car)
-{
-    echo '<ul>';
-    foreach ($car->getCharacteristics() as $name => $value)
-    {
-        echo '<li>'.$name.' : '.$value.'</li>';
-
-    }
-    echo '<ul>';
-}
-
-
-
-
-
-
-

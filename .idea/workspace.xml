@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45e9f2a5-b095-4e52-abb3-29b2a705be23" name="Default Changelist" comment="Ajout images">
-      <change afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
+    <list default="true" id="45e9f2a5-b095-4e52-abb3-29b2a705be23" name="Default Changelist" comment="sidebar_scroll">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sshConfigs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/bdd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cour.php" beforeDir="false" afterPath="$PROJECT_DIR$/cour.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +30,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
@@ -85,7 +82,8 @@
       <workItem from="1608327572417" duration="2942000" />
       <workItem from="1608333104181" duration="127000" />
       <workItem from="1608383518073" duration="2753000" />
-      <workItem from="1608389825304" duration="2161000" />
+      <workItem from="1608389825304" duration="9820000" />
+      <workItem from="1608472469293" duration="14513000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1608142849439</created>
@@ -129,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608252011288</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="sidebar_scroll">
+      <created>1608392212811</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608392212811</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +157,8 @@
     <MESSAGE value="Site" />
     <MESSAGE value="add class User" />
     <MESSAGE value="Ajout images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout images" />
+    <MESSAGE value="sidebar_scroll" />
+    <option name="LAST_COMMIT_MESSAGE" value="sidebar_scroll" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
