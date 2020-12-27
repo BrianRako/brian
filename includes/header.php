@@ -1,8 +1,9 @@
 <?php 
-if(!isset($_SESSION)) 
-{ 
-  session_start(); 
-}
+
+if(!isset($_SESSION)) {
+  session_start();
+} 
+
  
 ?>
 <!DOCTYPE html>
@@ -94,7 +95,7 @@ if(!isset($_SESSION))
             </div> 
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <?php if (isset($_SESSION['user_admin']) && !empty($_SESSION['user_admin']) == 1 ) { ?>
+            <?php if (isset($_SESSION['user_admin']) && !empty($_SESSION['user_admin']) == 'Administrateur' ) { ?>
               <a class="dropdown-item" href="https://rakowitsch-brian.go.yj.fr/admin">Panneau Administration</a> <?php }else {} ?>
               <a class="dropdown-item" href="https://rakowitsch-brian.go.yj.fr/mon-compte">Mon compte</a>
               <a class="dropdown-item" href="https://rakowitsch-brian.go.yj.fr/deconnexion">Deconnexion</a>

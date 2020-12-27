@@ -1,4 +1,10 @@
-<?php 
+<?php
+if(!isset($_SESSION)) 
+{ 
+  session_start(); 
+}
+ 
+
 include('includes/class/bdd.php');
 
 if (isset($bdd)) {
@@ -26,7 +32,6 @@ if (isset($bdd)) {
 		<div class="bloc_page">
 
 			
-
 			
 
 

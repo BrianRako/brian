@@ -22,9 +22,9 @@ class UserService
             $this->_user = $user; // store it so it can be accessed later
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['first_name'] = $user['prenom'];
-            $_SESSION['lest_name'] = $user['nom'];
+            $_SESSION['last_name'] = $user['nom'];
             $_SESSION['user_mail'] = $user['mail'];
-            $_SESSION['user_admin'] = $user['admin'];
+            $_SESSION['user_admin'] = $user['role'];
             return $user['id'];
         }
         return false;
@@ -36,8 +36,8 @@ class UserService
         $stmt->execute(array($this->_email));
         if ($stmt->rowCount() > 0) {
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
-            $submitted_pass = sha1($user['salt'] . $this->_password);
-            if ($submitted_pass == $user['password']) {
+            $submitted_pass = sha1($this->_password);
+            if ($submitted_pass == $user['mdp']) {
                 return $user;
             }
         }
