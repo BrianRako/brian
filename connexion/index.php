@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_SESSION['id'])) {
-    header('https://rakowitsch-brian.go.yj.fr/');
+    header('location:https://rakowitsch-brian.go.yj.fr/');
 }
 
 include_once '../includes/class/login.php';
@@ -12,7 +12,8 @@ if (isset($_POST['formconnexion']))
 	$userService = new UserService($bdd, $_POST['mail'], $_POST['mdp']);
 	if ($user_id = $userService->login()) {
 		$userData = $userService->getUser();
-		
+
+
 		// do stuff
 	} else {
 		echo 'Invalid login';

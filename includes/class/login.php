@@ -2,11 +2,11 @@
 
 class UserService
 {
-    protected $_email;    // using protected so they can be accessed
-    protected $_password; // and overidden if necessary
+    protected $_email;    
+    protected $_password; 
 
-    protected $_db;       // stores the database handler
-    protected $_user;     // stores the user data
+    protected $_db;       
+    protected $_user;     
 
     public function __construct(PDO $db, $email, $password)
     {
@@ -19,11 +19,11 @@ class UserService
     {
         $user = $this->_checkCredentials();
         if ($user) {
-            $this->_user = $user; // store it so it can be accessed later
-            $_SESSION['user_id'] = $user['id'];
+            $this->_user = $user; 
+            $_SESSION['user_id']    = $user['id'];
             $_SESSION['first_name'] = $user['prenom'];
-            $_SESSION['last_name'] = $user['nom'];
-            $_SESSION['user_mail'] = $user['mail'];
+            $_SESSION['last_name']  = $user['nom'];
+            $_SESSION['user_mail']  = $user['mail'];
             $_SESSION['user_admin'] = $user['role'];
             return $user['id'];
         }

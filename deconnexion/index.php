@@ -2,6 +2,6 @@
 	session_start();
 	
 	session_destroy();
-	header("Location: http://127.0.0.1/site/");
+	header("Location: https://rakowitsch-brian.go.yj.fr/");
 	exit;
 	?>

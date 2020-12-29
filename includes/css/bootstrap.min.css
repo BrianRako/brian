@@ -1,3 +1,6 @@
+.container.log{
+    margin-top: 200px;
+}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -211,49 +214,12 @@ padding: 0 10px;
     line-height: 1.2rem;
 }
 
-
 .badges.arrow{
-    -webkit-transition-duration: .2s;
-
+    transition-duration: .2s;
 }
-.c-sidenav--is-open .badges.arrow
-{
-    transform: rotate(180deg);
-    margin-top: 17px;
-}
+    
 .separator {
     margin-top: 75px;
-}
-
-.badges.steam {
-}
-
-.badges.origin {
-}
-
-.badges.rockstar {
-}
-
-.badges.xbox {
-}
-
-.badges.indies {
-}
-
-.badges.uplay {
-}
-
-.badges.battlenet {
-}
-
-.badges.nintendo {
-}
-
-.badges.playstation {
-}
-
-.badges.autres {
-
 }
 
 .badges {
@@ -262,7 +228,6 @@ padding: 0 10px;
     width: 30px;
     padding-top: 10px;
 }
-
 
 .num_members{
     position: absolute;
