@@ -1,8 +1,10 @@
-<?php  
+<?php
+
+
 require_once '../includes/header.php';
 
 
-require('../bdd.php');
+
 
 if (isset($_POST['forminscription'])) {
 
@@ -51,7 +53,7 @@ if (isset($_POST['forminscription'])) {
 <body>
 	<div class="separ"></div>
 	<main>
-	<div class="container">
+	<div class="container register">
 
 		<!--Grid row-->
 		<div class="row d-flex justify-content-center">

@@ -31,7 +31,7 @@ include('../bdd.php');
 				<div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg "
 					href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i
 					class="ti-menu"></i></a>
-					<div class="top-left-part"><a class="logo" href="http://127.0.0.1/site/admin"><i
+					<div class="top-left-part"><a class="logo" href="https://rakowitsch-brian.go.yj.fr/admin/admin"><i
 						class="glyphicon glyphicon-fire"></i>&nbsp;<span class="hidden-xs">Administration</span></a>
 						
 						</div>
@@ -42,7 +42,7 @@ include('../bdd.php');
 
 						</ul>
 						<ul class="nav navbar-top-links navbar-right pull-right">
-							<li><a href="http://127.0.0.1/site">Access site</a></li>
+							<li><a href="https://rakowitsch-brian.go.yj.fr/">Access site</a></li>
 							<li>
 								<form role="search" class="app-search hidden-xs">
 									<input type="text" placeholder="Search..." class="form-control">
@@ -51,7 +51,7 @@ include('../bdd.php');
 							</li>
 							<li>
 								<a class="profile-pic" href="#"> <i class="far fa-user fa-lg"></i>
-									<b class="hidden-xs"><?= $_SESSION['prenom']; ?></b> </a>
+									<b class="hidden-xs"><?= $_SESSION['first_name']; ?></b> </a>
 								</li>
 							</ul>
 						</div>
@@ -71,7 +71,7 @@ include('../bdd.php');
 									</div>
 								</li>
 								<li>
-									<a href="http://127.0.0.1/site/admin" class="waves-effect"><i class="glyphicon glyphicon-fire fa-fw"></i>
+									<a href="https://rakowitsch-brian.go.yj.fr/admin" class="waves-effect"><i class="glyphicon glyphicon-fire fa-fw"></i>
 									Dashboard</a>
 								</li>
 								<li>

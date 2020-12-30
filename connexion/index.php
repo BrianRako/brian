@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 
 if (isset($_SESSION['id'])) {
     header('location:https://rakowitsch-brian.go.yj.fr/');
@@ -10,13 +12,13 @@ include_once '../includes/class/bdd.php';
 if (isset($_POST['formconnexion']))
 {
 	$userService = new UserService($bdd, $_POST['mail'], $_POST['mdp']);
-	if ($user_id = $userService->login()) {
+	if ($user = $userService->login()) {
 		$userData = $userService->getUser();
+		header('location:https://rakowitsch-brian.go.yj.fr/');
 
 
-		// do stuff
 	} else {
-		echo 'Invalid login';
+		$erreur = 'Mauvaise adresse mail ou mot de passe';
 	}
 
 	
@@ -66,6 +68,8 @@ if (isset($_POST['formconnexion']))
 
 
 								<div class="d-flex justify-content-between align-items-center mb-2">
+
+									
 
 
 

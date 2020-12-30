@@ -1,8 +1,8 @@
 <?php
-include('session.php');
+session_start();
 
 
-    if (isset($_SESSION['admin']) && !empty($_SESSION['admin']) == 1) { ?>
+    if (isset($_SESSION['user_role']) && !empty($_SESSION['user_role']) == 'Administrateur') { ?>
         
     
  
@@ -223,5 +223,5 @@ include('session.php');
 </html>
 
 <?php } else {
-    header('location:http://127.0.0.1/site/404');
+    header('location:https://rakowitsch-brian.go.yj.fr/404');
 } ?>

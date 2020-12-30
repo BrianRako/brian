@@ -1,6 +1,9 @@
 .container.log{
     margin-top: 200px;
 }
+.container.register {
+    margin-top: 150px;
+}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -32,10 +35,20 @@ body {
     bottom: 0;
 
 }
+.c-sidenav--is-open::-webkit-scrollbar {
+    width: 5px;
+    background-color: #2b2b2c;
+}
+.c-sidenav--is-open::-webkit-scrollbar-thumb {
+    background-color: gray;
+}
+
 .c-sidenav--is-open {
   width: 16rem;
     overflow-y: scroll;
 }
+
+
 .c-sidenav__opener {
   background: #5f5f61;
   border: 0;
@@ -217,7 +230,10 @@ padding: 0 10px;
 .badges.arrow{
     transition-duration: .2s;
 }
-    
+.c-sidenav--is-open .badges.arrow {
+    transform: rotate(180deg);
+}
+
 .separator {
     margin-top: 75px;
 }
@@ -226,7 +242,7 @@ padding: 0 10px;
     background-repeat: no-repeat;
         background-size: 35px;
     width: 30px;
-    padding-top: 10px;
+    margin-top: 10px;
 }
 
 .num_members{

@@ -10,8 +10,8 @@ class UserService
 
     public function __construct(PDO $db, $email, $password)
     {
-        $this->_db = $db;
-        $this->_email = $email;
+        $this->_db       = $db;
+        $this->_email    = $email;
         $this->_password = $password;
     } 
 
@@ -19,12 +19,12 @@ class UserService
     {
         $user = $this->_checkCredentials();
         if ($user) {
-            $this->_user = $user; 
+                      $this->_user  = $user;
             $_SESSION['user_id']    = $user['id'];
             $_SESSION['first_name'] = $user['prenom'];
             $_SESSION['last_name']  = $user['nom'];
             $_SESSION['user_mail']  = $user['mail'];
-            $_SESSION['user_admin'] = $user['role'];
+            $_SESSION['user_role']  = $user['role'];
             return $user['id'];
         }
         return false;
