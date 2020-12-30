@@ -2,11 +2,10 @@
 include('session.php');
 
     // verifie si l'utilisateurs est bien admin pour avoir accees a cette page
-if (isset($_SESSION['admin']) && !empty($_SESSION['admin']) == 1) { ?>
+if (isset($_SESSION['user_role']) && !empty($_SESSION['user_role']) == 'Administrateur') { ?>
 
     <?php 
-    include('../bdd.php');
-    include('function.php');
+    include('../includes/class/bdd.php');
 
     // savoir sur quelle page on se trouve
     if (isset($_GET['page']) && !empty($_GET['page'])) {
@@ -144,7 +143,7 @@ if (isset($_SESSION['admin']) && !empty($_SESSION['admin']) == 1) { ?>
             <ul class="pagination" style=" margin-left: 10%">
 
                 <li class="page-item <?= ($currentPage == 1) ? "disabled" : "" ?>">
-                    <a href="?page=<?= $currentPage - 1 ?>" class="page-link">Précédente</a>
+                    <a href="?page=<?= $currentPage - 1 ?>" class="page-link" <?= ($currentPage == 1) ? "onclick= 'return false;'" : "" ?>>Précédente</a>
                 </li>
                 <?php for($page = 1; $page <= $pages; $page++): ?>
 
