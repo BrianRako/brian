@@ -1,5 +1,7 @@
 <?php
 
+include_once 'bdd.php';
+
 class UserService
 {
     protected $_email;    

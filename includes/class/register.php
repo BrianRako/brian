@@ -53,6 +53,30 @@ class UserLog
         return true;
     }
 
+    protected function _checkConfirmMail()
+    {
+        if ($this->_email == $this->_email_confirm) {
+            return true;
+        }
+        return false;
+    }
 
+    protected function _checkConfirmPassword()
+    {
+        if ($this->_password == $this->_password_confirm) {
+            return true;
+        }
+        return false;
+    }
 
+    protected function _checkCredentials()
+    {
+        if ($this->_checkEmail() == true) {
+            if ($this->_checkConfirmMail() == true) {
+                if ($this->_checkConfirmPassword() == true) {
+                    return true;
+                }
+            }
+        }
+    }
 }
