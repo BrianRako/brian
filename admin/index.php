@@ -2,45 +2,43 @@
 session_start();
 
 
-    if (isset($_SESSION['user_role']) && !empty($_SESSION['user_role']) == 'Administrateur') { ?>
-        
-    
- 
-<!DOCTYPE html>
-<html lang="en">
+if (isset($_SESSION['user_role']) && !empty($_SESSION['user_role']) == 'Administrateur') { ?>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords"
-        content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 4 admin, bootstrap 4, css3 dashboard, bootstrap 4 dashboard, severny admin bootstrap 4 dashboard, frontend, responsive bootstrap 4 admin template, my admin design, my admin dashboard bootstrap 4 dashboard template">
-    <meta name="description"
-        content="My Admin is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
-    <meta name="robots" content="noindex,nofollow">
-    <title>My Admin Template by WrapPixel</title>
-    <link rel="canonical" href="https://www.wrappixel.com/templates/myadmin-lite/" />
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-    <!-- Bootstrap Core CSS -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Menu CSS -->
-    <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
-    <!-- Menu CSS -->
-    <link href="bower_components/morrisjs/morris.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 4 admin, bootstrap 4, css3 dashboard, bootstrap 4 dashboard, severny admin bootstrap 4 dashboard, frontend, responsive bootstrap 4 admin template, my admin design, my admin dashboard bootstrap 4 dashboard template">
+        <meta name="description" content="My Admin is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+        <meta name="robots" content="noindex,nofollow">
+        <title>Administration</title>
+        <link rel="canonical" href="https://www.wrappixel.com/templates/myadmin-lite/" />
+        <!-- Favicon icon -->
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+        <!-- Bootstrap Core CSS -->
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Menu CSS -->
+        <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+        <!-- Menu CSS -->
+        <link href="bower_components/morrisjs/morris.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/style.css" rel="stylesheet">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-</head>
+    </head>
 
-<body>
-    <!-- Preloader -->
-   <?php include('header.php'); ?>
+    <body>
+        <!-- Preloader -->
+        <?php include('header.php'); ?>
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="container-fluid">
@@ -102,8 +100,7 @@ session_start();
                                 <li class="list-group-item" data-role="task">
                                     <div class="checkbox checkbox-info">
                                         <input type="checkbox" id="inputCall" name="inputCheckboxesCall">
-                                        <label for="inputCall"> <span>Call clients for follow-up</span> <span
-                                                class="label label-danger">Today</span> </label>
+                                        <label for="inputCall"> <span>Call clients for follow-up</span> <span class="label label-danger">Today</span> </label>
                                     </div>
                                 </li>
                                 <li class="list-group-item" data-role="task">
@@ -115,8 +112,7 @@ session_start();
                                 <li class="list-group-item" data-role="task">
                                     <div class="checkbox checkbox-info">
                                         <input type="checkbox" id="inputForward" name="inputCheckboxesForward">
-                                        <label for="inputForward"> <span>Forward important tasks</span> <span
-                                                class="label label-warning">2 weeks</span> </label>
+                                        <label for="inputForward"> <span>Forward important tasks</span> <span class="label label-warning">2 weeks</span> </label>
                                     </div>
                                 </li>
                                 <li class="list-group-item" data-role="task">
@@ -128,8 +124,7 @@ session_start();
                                 <li class="list-group-item" data-role="task">
                                     <div class="checkbox checkbox-info">
                                         <input type="checkbox" id="inputForward2" name="inputCheckboxesd">
-                                        <label for="inputForward2"> <span>Important tasks</span> <span
-                                                class="label label-success">2 weeks</span> </label>
+                                        <label for="inputForward2"> <span>Important tasks</span> <span class="label label-success">2 weeks</span> </label>
                                     </div>
                                 </li>
                             </ul>
@@ -141,8 +136,7 @@ session_start();
                             <div class="message-center">
                                 <a href="#">
                                     <div class="user-img">
-                                        <img src="images/users/pawandeep.jpg" alt="user" class="img-circle"> <span
-                                            class="profile-status online pull-right"></span>
+                                        <img src="images/users/pawandeep.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span>
                                     </div>
                                     <div class="mail-contnet">
                                         <h5>Pavan kumar</h5>
@@ -151,18 +145,15 @@ session_start();
                                     </div>
                                 </a>
                                 <a href="#">
-                                    <div class="user-img"> <img src="images/users/sonu.jpg" alt="user"
-                                            class="img-circle"> <span class="profile-status busy pull-right"></span>
+                                    <div class="user-img"> <img src="images/users/sonu.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span>
                                     </div>
                                     <div class="mail-contnet">
                                         <h5>Sonu Nigam</h5>
-                                        <span class="mail-desc">I've sung a song! See you at</span> <span
-                                            class="time">9:10 AM</span>
+                                        <span class="mail-desc">I've sung a song! See you at</span> <span class="time">9:10 AM</span>
                                     </div>
                                 </a>
                                 <a href="#">
-                                    <div class="user-img"> <img src="images/users/arijit.jpg" alt="user"
-                                            class="img-circle"> <span class="profile-status away pull-right"></span>
+                                    <div class="user-img"> <img src="images/users/arijit.jpg" alt="user" class="img-circle"> <span class="profile-status away pull-right"></span>
                                     </div>
                                     <div class="mail-contnet">
                                         <h5>Arijit Sinh</h5>
@@ -170,18 +161,15 @@ session_start();
                                     </div>
                                 </a>
                                 <a href="#">
-                                    <div class="user-img"> <img src="images/users/genu.jpg" alt="user"
-                                            class="img-circle"> <span class="profile-status online pull-right"></span>
+                                    <div class="user-img"> <img src="images/users/genu.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span>
                                     </div>
                                     <div class="mail-contnet">
                                         <h5>Genelia Deshmukh</h5>
-                                        <span class="mail-desc">I love to do acting and dancing</span> <span
-                                            class="time">9:08 AM</span>
+                                        <span class="mail-desc">I love to do acting and dancing</span> <span class="time">9:08 AM</span>
                                     </div>
                                 </a>
                                 <a href="#" class="b-none">
-                                    <div class="user-img"> <img src="images/users/pawandeep.jpg" alt="user"
-                                            class="img-circle"> <span class="profile-status offline pull-right"></span>
+                                    <div class="user-img"> <img src="images/users/pawandeep.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span>
                                     </div>
                                     <div class="mail-contnet">
                                         <h5>Pavan kumar</h5>
@@ -198,29 +186,28 @@ session_start();
             <!-- /.container-fluid -->
         </div>
         <!-- /#page-wrapper -->
-        <footer class="footer text-center"> 2020 &copy; Myadmin brought to you by <a
-                href="https://www.wrappixel.com/">wrappixel.com</a> </footer>
-    </div>
-    <!-- /#wrapper -->
-    <!-- jQuery -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- Menu Plugin JavaScript -->
-    <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
-    <!--Nice scroll JavaScript -->
-    <script src="js/jquery.nicescroll.js"></script>
-    <!--Morris JavaScript -->
-    <script src="bower_components/raphael/raphael-min.js"></script>
-    <script src="bower_components/morrisjs/morris.js"></script>
-    <!--Wave Effects -->
-    <script src="js/waves.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="js/myadmin.js"></script>
-    <script src="js/dashboard1.js"></script>
-</body>
+        <footer class="footer text-center"> 2020 &copy; Myadmin brought to you by <a href="https://www.wrappixel.com/">wrappixel.com</a> </footer>
+        </div>
+        <!-- /#wrapper -->
+        <!-- jQuery -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Menu Plugin JavaScript -->
+        <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+        <!--Nice scroll JavaScript -->
+        <script src="js/jquery.nicescroll.js"></script>
+        <!--Morris JavaScript -->
+        <script src="bower_components/raphael/raphael-min.js"></script>
+        <script src="bower_components/morrisjs/morris.js"></script>
+        <!--Wave Effects -->
+        <script src="js/waves.js"></script>
+        <!-- Custom Theme JavaScript -->
+        <script src="js/myadmin.js"></script>
+        <script src="js/dashboard1.js"></script>
+    </body>
 
-</html>
+    </html>
 
 <?php } else {
     header('location:https://rakowitsch-brian.go.yj.fr/404');
