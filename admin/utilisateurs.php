@@ -5,37 +5,25 @@ include('session.php');
 if (isset($_SESSION['user_role']) && !empty($_SESSION['user_role']) == 'Administrateur') { ?>
 
     <?php
-    include('../includes/class/bdd.php');
+    include_once '../includes/class/bdd.php';
+    include_once '../includes/class/pagination.php';
 
-    // savoir sur quelle page on se trouve
-    if (isset($_GET['page']) && !empty($_GET['page'])) {
-        $currentPage = (int) strip_tags($_GET['page']);
-    } else {
-        $currentPage = 1;
-    }
 
-    // savoir combien nous avons de membre
-    $req_table = $bdd->prepare('SELECT COUNT(*) AS nb_membre FROM utilisateurs');
-    $req_table->execute();
-    $result = $req_table->fetch(PDO::FETCH_OBJ);
-    $nbMembre = $result->nb_membre;
+    $pages = new Paginator('10', 'page');
 
-    // membres a afficher par page
-    $parPage = 10;
+    //get number of total records
+    $stmt = $bdd->prepare('SELECT id FROM utilisateurs');
+    $stmt->execute();
+    $total = $stmt->rowCount();
 
-    // calcule pour determiner combien de pages on aura
-    $pages = ceil($nbMembre / $parPage);
+    //pass number of records to
+    $pages->set_total($total);
 
-    // determiner premiere page
-    $premier = ($currentPage * $parPage) - $parPage;
+    $data = $bdd->prepare('SELECT * FROM utilisateurs ' . $pages->get_limit());
+    $data->execute();
 
-    // Affichage et pagination de tous les membres
-    $req_membre = $bdd->prepare('SELECT * FROM utilisateurs  LIMIT :premier, :parpage');
-    $req_membre->bindValue(':premier', $premier, PDO::PARAM_INT);
-    $req_membre->bindValue(':parpage', $parPage, PDO::PARAM_INT);
-    $req_membre->execute();
 
-    // suppresion de membres
+    // delete user
     if (isset($_GET['supprime']) && !empty($_GET['supprime'])) {
         $suppr = (int) $_GET['supprime'];
 
@@ -43,9 +31,9 @@ if (isset($_SESSION['user_role']) && !empty($_SESSION['user_role']) == 'Administ
         $req_suppr->execute(array($suppr));
     }
 
-    // edition de profile
+    // edit user
     if (isset($_GET['profile']) && !empty($_GET['profile'])) {
-        $profile =  (int) $_GET['profile'];
+        $profile = (int) $_GET['profile'];
 
         $req_profile = $bdd->prepare('SELECT * FROM utilisateurs WHERE id = ?');
         $req_profile->execute(array($profile));
@@ -74,6 +62,7 @@ if (isset($_SESSION['user_role']) && !empty($_SESSION['user_role']) == 'Administ
         <!-- Custom CSS -->
         <link href="css/style.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="/admin/css/pagination.css">
     </head>
 
     <body>
@@ -110,24 +99,21 @@ if (isset($_SESSION['user_role']) && !empty($_SESSION['user_role']) == 'Administ
                                         </tr>
                                     </thead>
 
-                                    <?php while ($s = $req_membre->fetch(PDO::FETCH_OBJ)) { ?>
+                                    <?php foreach ($data as $row) { ?>
 
 
 
                                         <tbody>
                                             <tr>
-                                                <td><?= $s->id ?></td>
-                                                <td><?= $s->nom; ?></td>
-                                                <td><?= $s->prenom; ?> </td>
-                                                <td><?= $s->mail; ?></td>
-                                                <td><?= $s->date_inscription ?></td>
-                                                <td><?php if ($s->admin == 1) {
-                                                        echo "Administrateur";
-                                                    } else {
-                                                        echo "Membre";
-                                                    } ?></td>
+                                                <td><?= $row['id']; ?></td>
+                                                <td><?= $row['nom']; ?></td>
+                                                <td><?= $row['prenom']; ?> </td>
+                                                <td><?= $row['mail']; ?></td>
+                                                <td><?= $row['date_inscription']; ?></td>
+                                                <td><?= ($row['role'] == 'Administrateur' ? 'Administrateur' : 'Abonné'); ?></td>
 
-                                                <td> <a href="profile_edit.php/?profile=<?= $s->id ?>" class="btn btn-success btn-sm">Modifier</a> - <a href="?supprime=<?= $s->id; ?>" class="btn btn-danger btn-sm">Supprimer</a>
+
+                                                <td> <a href="profile_edit.php/?profile=<?= $row['id'] ?>" class="btn btn-success btn-sm">Modifier</a> - <a href="?supprime=<?= $row['id']; ?>" class="btn btn-danger btn-sm">Supprimer</a>
                                                 </td>
                                             </tr>
 
@@ -135,30 +121,15 @@ if (isset($_SESSION['user_role']) && !empty($_SESSION['user_role']) == 'Administ
                                         </tbody>
                                 </table>
                             </div>
+                            <?php echo $pages->page_links(); ?>
 
                         </div>
                     </div>
                 </div>
             </div>
             <!-- /.container-fluid -->
-            <nav>
-                <ul class="pagination" style=" margin-left: 10%">
 
-                    <li class="page-item <?= ($currentPage == 1) ? "disabled" : "" ?>">
-                        <a href="?page=<?= $currentPage - 1 ?>" class="page-link" <?= ($currentPage == 1) ? "onclick= 'return false;'" : "" ?>>Précédente</a>
-                    </li>
-                    <?php for ($page = 1; $page <= $pages; $page++) : ?>
 
-                        <li class="page-item <?= ($currentPage == $page) ? "active" : "" ?>">
-                            <a href="?page=<?= $page ?>" class="page-link"><?= $page ?></a>
-                        </li>
-                    <?php endfor ?>
-
-                    <li class="page-item <?= ($currentPage == $pages) ? "disabled" : "" ?>">
-                        <a href="?page=<?= $currentPage + 1 ?>" class="page-link" <?= ($currentPage == $pages) ? "onclick= 'return false;'" : "" ?>>Suivante</a>
-                    </li>
-                </ul>
-            </nav>
 
         </div>
         <!-- /#page-wrapper -->

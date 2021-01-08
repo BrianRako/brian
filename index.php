@@ -1,29 +1,36 @@
 <?php
 
- 
+
+
 
 include('includes/class/bdd.php');
+include_once('includes/class/pagination.php');
+
+
 
 
 ?>
 <!DOCTYPE html>
 <html lang="FR_fr">
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	 <link rel="icon" type="image/png" sizes="16x16" href="http://127.0.0.1/site/images/logo.png"></link>
+	<link rel="icon" type="image/png" sizes="16x16" href="http://127.0.0.1/site/images/logo.png">
+	</link>
 	<title>Accueil</title>
 </head>
+
 <body>
 	<header>
-		<?php require_once("includes/header.php"); ?> 
+		<?php require_once("includes/header.php"); ?>
 	</header>
-	<div  id="background" class="page_all">
+	<div id="background" class="page_all">
 
 		<div class="bloc_page">
 
-			
-			<?php var_dump($_SESSION); ?>
+
+			<?php  ?>
 
 
 		</div>
@@ -36,4 +43,5 @@ include('includes/class/bdd.php');
 
 	</footer>
 </body>
+
 </html>

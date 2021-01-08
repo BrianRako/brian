@@ -1,0 +1,34 @@
+.pagination {
+  clear: both;
+  padding: 0;
+}
+.pagination li {
+  display: inline;
+}
+.pagination a {
+  border: 1px solid #d5d5d5;
+  color: #666666;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  text-decoration: none;
+  margin: 2px;
+  text-align: center;
+}
+.pagination a:hover,
+.pagination a:active {
+  background: #efefef;
+}
+.pagination span.current {
+  background-color: #687282;
+  border: 1px solid #d5d5d5;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 2px;
+  text-align: center;
+}
+.pagination span.disabled {
+  display: none;
+}
