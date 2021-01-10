@@ -1,2 +1,1 @@
-<footer class="footer text-center"> 2020 &copy; Myadmin brought to you by <a
-                href="https://www.wrappixel.com/">wrappixel.com</a> </footer>
+<footer class="footer text-center"><?= date('Y') ?> &copy; Site projet personelle </footer>

@@ -75,8 +75,8 @@ if (isset($_SESSION['user_role']) && !empty($_SESSION['user_role']) == 'Administ
                     <div class="col-lg-12">
                         <h4 class="page-title">Utilisateurs</h4>
                         <ol class="breadcrumb">
-                            <li><a href="http://127.0.0.1/site/admin/">Dashboard</a></li>
-                            <li class="active">Basic Table</li>
+                            <li><a href="https://rakowitsch-brian.go.yj.fr/admin/">Dashboard</a></li>
+                            <li class="active">Utilisateurs</li>
                         </ol>
                     </div>
                     <!-- /.col-lg-12 -->
@@ -98,11 +98,7 @@ if (isset($_SESSION['user_role']) && !empty($_SESSION['user_role']) == 'Administ
                                             <th>Editeur</th>
                                         </tr>
                                     </thead>
-
                                     <?php foreach ($data as $row) { ?>
-
-
-
                                         <tbody>
                                             <tr>
                                                 <td><?= $row['id']; ?></td>
@@ -111,9 +107,8 @@ if (isset($_SESSION['user_role']) && !empty($_SESSION['user_role']) == 'Administ
                                                 <td><?= $row['mail']; ?></td>
                                                 <td><?= $row['date_inscription']; ?></td>
                                                 <td><?= ($row['role'] == 'Administrateur' ? 'Administrateur' : 'Abonné'); ?></td>
-
-
-                                                <td> <a href="profile_edit.php/?profile=<?= $row['id'] ?>" class="btn btn-success btn-sm">Modifier</a> - <a href="?supprime=<?= $row['id']; ?>" class="btn btn-danger btn-sm">Supprimer</a>
+                                                <td> <a href="profile_edit.php/?profile=<?= $row['id'] ?>" class="btn btn-success btn-sm">Modifier</a> -
+                                                    <a href="?supprime=<?= $row['id']; ?>" class="btn btn-danger btn-sm">Supprimer</a>
                                                 </td>
                                             </tr>
 
