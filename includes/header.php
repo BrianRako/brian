@@ -11,12 +11,10 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <link rel="icon" type="image/png" sizes="16x16" href="https://rakowitsch-brian.go.yj.fr/images/logo.png">
   </link>
-  <link rel="stylesheet" href="https://rakowitsch-brian.go.yj.fr/includes/css/bootstrap.min.css"></link>
+  <link rel="stylesheet" href="https://rakowitsch-brian.go.yj.fr/includes/css/bootstrap.min.css">
+  </link>
   <link rel="stylesheet" type="text/css" href="https://rakowitsch-brian.go.yj.fr/includes/css/mdb-pro.min.css">
   <link rel="stylesheet" href="https://rakowitsch-brian.go.yj.fr/includes/css/mdb.ecommerce.min.css">
-
-
-
 </head>
 
 
@@ -36,12 +34,12 @@
       </a>
 
       <!-- Collapse button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse navbar-collapse" aria-controls="collapse navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <!-- Links -->
-      <div class="collapse navbar-collapse" id="basicExampleNav">
+      <div class="collapse navbar-collapse" id="collapse navbar-collapse">
 
         <!-- Right -->
         <ul class="navbar-nav ml-auto">
@@ -113,13 +111,13 @@
 
 
 
-  <nav class="c-sidenav">
+  <nav class="c-sidenav" id="main-sidenav">
 
 
     <div class="expand-top"></div>
 
 
-    <button class="c-sidenav__opener c-sidenav__link"><i class="c-sidenav__icon">
+    <button class="c-sidenav__opener c-sidenav__link" id="sidenav-opener"><i class="c-sidenav__icon">
         <img class="badges arrow" src="https://rakowitsch-brian.go.yj.fr/images/icons/arrow.png" alt="">
 
 
@@ -197,22 +195,19 @@
 
   </nav>
 
-  <script type="text/javascript">
-    var menuOpener = document.querySelector(".c-sidenav__opener"),
-      menu = document.querySelector(".c-sidenav");
 
-    menuOpener.addEventListener("click", function() {
-      menu.classList.toggle("c-sidenav--is-open");
-
-    });
-  </script>
 
 
 </header>
+
+
 <!-- Main Navigation -->
+<script type="text/javascript" src="https://rakowitsch-brian.go.yj.fr/includes/js/header.js"></script>
 <script type="text/javascript" src="https://rakowitsch-brian.go.yj.fr/includes/js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="https://rakowitsch-brian.go.yj.fr/includes/js/bootstrap.js"></script>
 <script type="text/javascript" src="https://rakowitsch-brian.go.yj.fr/includes/js/mdb.min.js"></script>
 <script type="text/javascript" src="https://rakowitsch-brian.go.yj.fr/includes/js/mdb.ecommerce.min.js"></script>
+
+
 
 </html>

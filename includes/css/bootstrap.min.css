@@ -3858,10 +3858,10 @@ input[type="submit"].btn-block {
   opacity: 0;
 }
 
-.collapse:not(.show) {
+.collapse {
   display: none;
 }
-.collapse_is_open {
+.collapse--is--open {
   display: block;
 }
 

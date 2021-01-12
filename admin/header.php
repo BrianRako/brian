@@ -87,7 +87,7 @@ include('../includes/class/bdd.php');
 								Map</a>
 						</li>
 						<li>
-							<a href="blank.php" class="waves-effect"><i class="ti-files fa-fw"></i>Produit</a>
+							<a href="produit.php" class="waves-effect"><i class="ti-files fa-fw"></i>Produit</a>
 						</li>
 					</ul>
 				</div>
