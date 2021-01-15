@@ -13,7 +13,7 @@ class UserService
     public function __construct(PDO $db, $email, $password)
     {
         $this->_db       = $db;
-        $this->_email    = $email;
+        $this->_email    = htmlspecialchars($email);
         $this->_password = $password;
     }
 

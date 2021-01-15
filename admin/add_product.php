@@ -1,4 +1,43 @@
 <?php
+include_once '../includes/class/bdd.php';
+
+if (isset($_POST['add'])) {
+    if (isset($_POST['nom']) && !empty($_POST)) {
+        if (isset($_POST['desc']) && !empty($_POST['desc'])) {
+            if (isset($_POST['prix']) && !empty($_POST['prix'])) {
+                if (isset($_FILES['uploadfile']) && !empty($_FILES['uploadfile']['name'])) {
+
+                    $name = htmlspecialchars($_POST['nom']);
+                    $desc = htmlspecialchars($_POST['desc']);
+                    $price = (int) $_POST['prix'];
+
+
+                    $filename = $_FILES["uploadfile"]["name"];
+                    $tempname = $_FILES["uploadfile"]["tmp_name"];
+                    $folder = "../images/produit/" . $filename;
+
+                    // Now let's move the uploaded image into the folder: image 
+                    if (move_uploaded_file($tempname, $folder)) {
+                        $msg = "Image uploaded successfully";
+                    } else {
+                        $msg = "Failed to upload image";
+                    }
+                    header('location:https://rakowitsch-brian.go.yj.fr/admin/add_product.php');
+
+                    $stmt = $bdd->prepare('INSERT INTO produit (images, nom, description, date_ajout, prix) VALUES(?, ?, ?, NOW(), ?)');
+                    $stmt->execute(array("https://rakowitsch-brian.go.yj.fr/images/produit/" .  $filename, $name, $desc, $price));
+                } else {
+                    echo "Pas d'image selectionnez";
+                }
+            }
+            die('prix');
+        }
+        die('desc');
+    }
+    die('name');
+}
+
+
 
 
 ?>
@@ -37,13 +76,13 @@
                     <div class="white-box">
 
 
-                        <form action="" name="form" id="form" method="POST">
+                        <form action="" name="form" id="form" method="POST" enctype="multipart/form-data">
 
                             <div class="form-row">
                                 <div class="col">
                                     <div class="md-form md-outline mt-0">
-                                        <input type="text" id="materialRegisterFormFirstName" name="nom" class="form-control" data-validetta="required">
                                         <label for="materialRegisterFormFirstName">Nom du produit</label>
+                                        <input type="text" id="materialRegisterFormFirstName" name="nom" class="form-control" data-validetta="required">
                                     </div>
                                 </div>
                             </div>
@@ -54,36 +93,45 @@
                                 <div class="col-md-12">
 
                                     <div class="md-form">
-                                        <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
                                         <label for="message">Desciption</label>
+                                        <textarea type="text" id="message" name="desc" rows="2" class="form-control md-textarea"></textarea>
                                     </div>
 
                                 </div>
                             </div>
 
                             <div class="form-row">
-                                <div class="col">
+                                <div class="col price">
                                     <div class="md-form md-outline mt-0">
-                                        <input type="text" id="materialRegisterFormFirstName" name="prix" class="form-control" data-validetta="required">
                                         <label for="materialRegisterFormFirstName">Prix</label>
+                                        <input type="text" id="materialRegisterFormFirstName" name="prix" class="form-control" data-validetta="required">
                                     </div>
                                 </div>
                             </div>
 
+                            <div class="prev">
+                                <div class="file">
+                                    <label for="file" class="input-file"><img class="picture" src="https://rakowitsch-brian.go.yj.fr/images/icons/photo.png" alt="" srcset=""></label>
+                                    <input type="file" class="input-file" name="uploadfile" id="file" accept="image/*" value="" onchange="loadFile(event)" />
+                                </div>
 
+                                <img class="preview" id="output" />
+                            </div>
 
-                            <div class="text-center mb-2">
+                            <div class="text-center mb-2 clear">
 
-                                <button type="submit" name="formadd" class="btn btn-primary mb-4">Ajoutez</button>
+                                <button type="submit" name="add" class="btn btn-primary mb-4 button">Ajoutez</button>
+
                             </div>
                         </form>
+
                     </div>
                 </div>
             </div>
         </div>
         <!-- /.row -->
     </div>
-
+    <script src="js/previewimage.js"></script>
 </body>
 
 </html>

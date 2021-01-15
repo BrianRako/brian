@@ -17,6 +17,7 @@ include('../includes/class/bdd.php');
 	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Menu CSS -->
 	<link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
 	<link href="css/style.css" rel="stylesheet">
 	<title></title>
 </head>
