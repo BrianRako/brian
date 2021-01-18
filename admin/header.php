@@ -15,9 +15,6 @@ include('../includes/class/bdd.php');
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
 	<!-- Bootstrap Core CSS -->
 	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Menu CSS -->
-	<link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
-
 	<link href="css/style.css" rel="stylesheet">
 	<title></title>
 </head>
@@ -95,7 +92,7 @@ include('../includes/class/bdd.php');
 				<!-- /.sidebar-collapse -->
 			</div>
 	</header>
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+
 	<!-- Bootstrap Core JavaScript -->
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<!-- Menu Plugin JavaScript -->
