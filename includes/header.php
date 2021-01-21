@@ -19,29 +19,28 @@
 
 
 
-<!-- Main Navigation -->
 <header>
 
 
 
-  <!-- Navbar -->
+
   <nav class="navbar navbar-expand-md navbar-light fixed-top scrolling-navbar" style="background: white;">
     <div class="container-fluid">
 
-      <!-- Brand -->
+
       <a class="navbar-brand" href="https://rakowitsch-brian.go.yj.fr/">
         <img class="img_logo" src="https://rakowitsch-brian.go.yj.fr/images/logo.png" height="100px" width="105px" alt="">
       </a>
 
-      <!-- Collapse button -->
+
       <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse navbar-collapse" aria-controls="collapse navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Links -->
+
       <div class="collapse navbar-collapse" id="collapse navbar-collapse">
 
-        <!-- Right -->
+
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a href="#!" class="nav-link navbar-link-2 waves-effect">
@@ -201,7 +200,7 @@
 </header>
 
 
-<!-- Main Navigation -->
+
 <script type="text/javascript" src="https://rakowitsch-brian.go.yj.fr/includes/js/header.js"></script>
 <script type="text/javascript" src="https://rakowitsch-brian.go.yj.fr/includes/js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="https://rakowitsch-brian.go.yj.fr/includes/js/bootstrap.js"></script>

@@ -67,48 +67,112 @@ if (isset($_SESSION['user_role']) && !empty($_SESSION['user_role']) == 'Administ
                                     </tbody>
                                 </table>
 
-                            </div>
+                                <div class="lightbox_bg"></div>
 
-                            <div class="lightbox_bg"></div>
+                                <div class="lightbox_container">
+                                    <div class="lightbox_close"></div>
+                                    <div class="lightbox_content">
+
+                                        <h2>Add company</h2>
+                                        <form class="form add" id="form_company" data-id="" novalidate>
+                                            <div class="input_container">
+                                                <label for="rank">Rank: <span class="required">*</span></label>
+                                                <div class="field_container">
+                                                    <input type="number" step="1" min="0" class="text" name="rank" id="rank" value="" required>
+                                                </div>
+                                            </div>
+                                            <div class="input_container">
+                                                <label for="company_name">Company name: <span class="required">*</span></label>
+                                                <div class="field_container">
+                                                    <input type="text" class="text" name="company_name" id="company_name" value="" required>
+                                                </div>
+                                            </div>
+                                            <div class="input_container">
+                                                <label for="industries">Industries: <span class="required">*</span></label>
+                                                <div class="field_container">
+                                                    <input type="text" class="text" name="industries" id="industries" value="" required>
+                                                </div>
+                                            </div>
+                                            <div class="input_container">
+                                                <label for="revenue">Revenue: <span class="required">*</span></label>
+                                                <div class="field_container">
+                                                    <input type="number" step="1" min="0" class="text" name="revenue" id="revenue" value="" required>
+                                                </div>
+                                            </div>
+                                            <div class="input_container">
+                                                <label for="fiscal_year">Fiscal year: <span class="required">*</span></label>
+                                                <div class="field_container">
+                                                    <input type="number" min="0" class="text" name="fiscal_year" id="fiscal_year" value="" required>
+                                                </div>
+                                            </div>
+                                            <div class="input_container">
+                                                <label for="employees">Employees: <span class="required">*</span></label>
+                                                <div class="field_container">
+                                                    <input type="number" min="0" class="text" name="employees" id="employees" value="" required>
+                                                </div>
+                                            </div>
+                                            <div class="input_container">
+                                                <label for="market_cap">Market cap: <span class="required">*</span></label>
+                                                <div class="field_container">
+                                                    <input type="number" step="1" min="0" class="text" name="market_cap" id="market_cap" value="" required>
+                                                </div>
+                                            </div>
+                                            <div class="input_container">
+                                                <label for="headquarters">Headquarters: <span class="required">*</span></label>
+                                                <div class="field_container">
+                                                    <input type="text" class="text" name="headquarters" id="headquarters" value="" required>
+                                                </div>
+                                            </div>
+                                            <div class="button_container">
+                                                <button type="submit">Add company</button>
+                                            </div>
+                                        </form>
+
+                                    </div>
+
+                                    <div class="lightbox_bg"></div>
 
 
 
-                            <noscript id="noscript_container">
-                                <div id="noscript" class="error">
-                                    <p>JavaScript support is needed to use this page.</p>
-                                </div>
-                            </noscript>
+                                    <noscript id="noscript_container">
+                                        <div id="noscript" class="error">
+                                            <p>JavaScript support is needed to use this page.</p>
+                                        </div>
+                                    </noscript>
 
-                            <div id="message_container">
-                                <div id="message" class="success">
-                                    <p>This is a success message.</p>
-                                </div>
-                            </div>
-
-                            <div id="loading_container">
-                                <div id="loading_container2">
-                                    <div id="loading_container3">
-                                        <div id="loading_container4">
-                                            Loading, please wait...
+                                    <div id="message_container">
+                                        <div id="message" class="success">
+                                            <p>This is a success message.</p>
                                         </div>
                                     </div>
+
+                                    <div id="loading_container">
+                                        <div id="loading_container2">
+                                            <div id="loading_container3">
+                                                <div id="loading_container4">
+                                                    Loading, please wait...
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
                                 </div>
+
                             </div>
                         </div>
-
                     </div>
                 </div>
+
+
+
+                <!-- /.container-fluid -->
+
+
+
             </div>
-        </div>
-
-
-
-        <!-- /.container-fluid -->
-
-
-
-        </div>
-        <?php include('footer.php') ?>
+            <?php include('footer.php') ?>
 
 
 
