@@ -11,7 +11,7 @@
     <body>
         <?php require_once("../includes/header.php"); ?>
 
-        <div class="all_page">
+        <div class="all_page" id="all_page">
             <!-- Grid row -->
             <div class="container">
                 <div class="row">

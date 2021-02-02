@@ -23,16 +23,26 @@ if (isset($_POST['forminscription'])) {
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="http://127.0.0.1/site/includes/css/validetta.css">
+
 	<title>Inscription</title>
 </head>
 
 <body>
 
+	<style>
+		.tooltip {
+			display: none;
+		}
+
+		.tooltip_error {
+			display: block;
+		}
+	</style>
+
 
 	<?php require_once '../includes/header.php'; ?>
 	<div class="separ"></div>
-	<main>
+	<main class="all_page">
 		<div class="container register">
 
 			<!--Grid row-->
@@ -49,14 +59,17 @@ if (isset($_POST['forminscription'])) {
 							<div class="form-row">
 								<div class="col">
 									<div class="md-form md-outline mt-0">
-										<input type="text" id="materialRegisterFormFirstName" name="nom" class="form-control" data-validetta="required">
-										<label for="materialRegisterFormFirstName">Nom</label>
+										<input type="text" id="materialRegisterFormLastName" name="nom" class="form-control" data-validetta="required">
+										<span id="tootltip_last_name" class="tooltip">Veuillez saisir un nom</span>
+										<label for="materialRegisterFormLastName">Nom</label>
+
 									</div>
 								</div>
 								<div class="col">
 									<div class="md-form md-outline mt-0">
-										<input type="text" id="materialRegisterFormLastName" name="prenom" class="form-control" data-validetta="required">
-										<label for="materialRegisterFormLastName">Prénom</label>
+										<input type="text" id="materialRegisterFormFirstName" name="prenom" class="form-control" data-validetta="required">
+										<label for="materialRegisterFormFirstName">Prénom</label>
+										<span id='tooltip_first_name' class="tooltip">Veuillez saisir un prenom</span>
 									</div>
 								</div>
 							</div>
@@ -64,29 +77,33 @@ if (isset($_POST['forminscription'])) {
 							<div class="md-form md-outline mt-0">
 								<input type="email" id="defaultForm-email1" name="mail" class="form-control" data-validetta="required,email">
 								<label data-error="wrong" data-success="right" for="defaultForm-email1">Adresse Mail</label>
+								<span class="tooltip_log">Adresse mail non valide</span>
 							</div>
 
 							<div class="md-form md-outline mt-0">
 								<input type="email" id="defaultForm-email2" name="confirmmail" class="form-control" data-validetta="required,equalTo[mail],email">
 								<label data-error="wrong" data-success="right" for="defaultForm-email2">Confirmation Adresse Mail</label>
+								<span class="tooltip_log">Les adresse mail ne correspondent pas</span>
 							</div>
 
 							<div class="md-form md-outline mt-0">
 								<input type="password" id="defaultForm-pass1" name="mdp" class="form-control" data-validetta="required,minLength[8]">
 								<label data-error="wrong" data-success="right" for="defaultForm-pass1">Mot de Passe</label>
 								<small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-									Au moins 8 caractères
+									<span class="tooltip_log">Votre mot de passe n'est pas assez long 8 caractères min</span>
+
 								</small>
 							</div>
 
 							<div class="md-form md-outline mt-0">
 								<input type="password" id="defaultForm-pass2" name="confirmmdp" class="form-control" data-validetta="required,equalTo[mdp]">
-								<label data-error="wrong" data-success="right" for="defaultForm-pass2">Confirmation Mot de Passe</label>
+								<label data-error="wrong" data-success="right" for="defaultForm-pass2" onkeyup="checkpwd()">Confirmation Mot de Passe</label>
+								<span id='tooltip_log' class="tooltip_log">Vos mots de passe ne correspondent pas </span>
 							</div>
 
 							<div class="text-center mb-2">
 
-								<button type="submit" name="forminscription" class="btn btn-primary mb-4">S'inscrire</button>
+								<button disabled type="submit" id='submit' name="forminscription" class="btn btn-primary mb-4">S'inscrire</button>
 
 
 
@@ -115,11 +132,8 @@ if (isset($_POST['forminscription'])) {
 
 		</div>
 	</main>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script type="text/javascript" src="https://rakowitsch-brian.go.yj.fr/includes/js/validetta.js"></script>
-	<script type="text/javascript" src="https://rakowitsch-brian.go.yj.fr/includes/js/validettaLang-fr-FR.js"></script>
-	<script type="text/javascript">
-		$(document).ready($("#form").validetta());
+	<script src="../includes/js/form_register.js"></script>
+
 	</script>
 
 </body>
