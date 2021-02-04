@@ -1,6 +1,7 @@
 // form validate
 
 (function () {
+
     const last_name = document.getElementById('materialRegisterFormLastName'),
         tootltip_last_name = document.getElementById('tooltip_last_name'),
         submit = document.getElementById('submit');
@@ -28,7 +29,11 @@
     });
 
 
-
-
+    submit.addEventListener('click', () => {
+        alert('Vous avez cliqué sur le bouton de connexion.');
+    });
+    submit.addEventListener('mouseenter', () => {
+        submit.style.background = 'black';
+    })
 
 }());
