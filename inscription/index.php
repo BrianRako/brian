@@ -57,15 +57,14 @@ if (isset($_POST['forminscription'])) {
 						<form action="" name="form" id="form" method="POST">
 
 							<div class="form-row">
-								<div class="col">
+								<div class="col" id="last_name">
 									<div class="md-form md-outline mt-0">
 										<input type="text" id="materialRegisterFormLastName" name="nom" class="form-control" data-validetta="required">
-										<span id="tootltip_last_name" class="tooltip">Veuillez saisir un nom</span>
 										<label for="materialRegisterFormLastName">Nom</label>
 
 									</div>
 								</div>
-								<div class="col">
+								<div class="col" id="first_name">
 									<div class="md-form md-outline mt-0">
 										<input type="text" id="materialRegisterFormFirstName" name="prenom" class="form-control" data-validetta="required">
 										<label for="materialRegisterFormFirstName">Prénom</label>
@@ -132,9 +131,10 @@ if (isset($_POST['forminscription'])) {
 
 		</div>
 	</main>
+
+
 	<script src="../includes/js/form_register.js"></script>
 
-	</script>
 
 </body>
 
