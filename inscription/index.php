@@ -23,6 +23,7 @@ if (isset($_POST['forminscription'])) {
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
 
 	<title>Inscription</title>
 </head>
@@ -41,7 +42,7 @@ if (isset($_POST['forminscription'])) {
 
 
 	<?php require_once '../includes/header.php'; ?>
-	<div class="separ"></div>
+	<div class="separ" id="separ"></div>
 	<main class="all_page">
 		<div class="container register">
 
@@ -59,50 +60,49 @@ if (isset($_POST['forminscription'])) {
 							<div class="form-row">
 								<div class="col" id="last_name">
 									<div class="md-form md-outline mt-0">
-										<input type="text" id="materialRegisterFormLastName" name="nom" class="form-control" data-validetta="required">
+										<input type="text" id="materialRegisterFormLastName" name="nom" class="form-control">
 										<label for="materialRegisterFormLastName">Nom</label>
 
 									</div>
 								</div>
 								<div class="col" id="first_name">
 									<div class="md-form md-outline mt-0">
-										<input type="text" id="materialRegisterFormFirstName" name="prenom" class="form-control" data-validetta="required">
+										<input type="text" id="materialRegisterFormFirstName" name="prenom" class="form-control">
 										<label for="materialRegisterFormFirstName">Prénom</label>
-										<span id='tooltip_first_name' class="tooltip">Veuillez saisir un prenom</span>
 									</div>
 								</div>
 							</div>
 
-							<div class="md-form md-outline mt-0">
-								<input type="email" id="defaultForm-email1" name="mail" class="form-control" data-validetta="required,email">
+							<div class="md-form md-outline mt-0" id="email">
+								<input type="email" id="defaultForm-email1" name="mail" class="form-control">
 								<label data-error="wrong" data-success="right" for="defaultForm-email1">Adresse Mail</label>
-								<span class="tooltip_log">Adresse mail non valide</span>
+
 							</div>
 
-							<div class="md-form md-outline mt-0">
-								<input type="email" id="defaultForm-email2" name="confirmmail" class="form-control" data-validetta="required,equalTo[mail],email">
+							<div class="md-form md-outline mt-0" id="email_confirm">
+								<input type="email" id="defaultForm-email2" name="confirmmail" class="form-control">
 								<label data-error="wrong" data-success="right" for="defaultForm-email2">Confirmation Adresse Mail</label>
-								<span class="tooltip_log">Les adresse mail ne correspondent pas</span>
+
 							</div>
 
-							<div class="md-form md-outline mt-0">
-								<input type="password" id="defaultForm-pass1" name="mdp" class="form-control" data-validetta="required,minLength[8]">
+							<div class="md-form md-outline mt-0" id="pass">
+								<input type="password" id="defaultForm-pass1" name="mdp" class="form-control">
 								<label data-error="wrong" data-success="right" for="defaultForm-pass1">Mot de Passe</label>
 								<small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-									<span class="tooltip_log">Votre mot de passe n'est pas assez long 8 caractères min</span>
+
 
 								</small>
 							</div>
 
-							<div class="md-form md-outline mt-0">
-								<input type="password" id="defaultForm-pass2" name="confirmmdp" class="form-control" data-validetta="required,equalTo[mdp]">
+							<div class="md-form md-outline mt-0" id="passconfirm">
+								<input type="password" id="defaultForm-pass2" name="confirmmdp" class="form-control">
 								<label data-error="wrong" data-success="right" for="defaultForm-pass2" onkeyup="checkpwd()">Confirmation Mot de Passe</label>
-								<span id='tooltip_log' class="tooltip_log">Vos mots de passe ne correspondent pas </span>
+
 							</div>
 
-							<div class="text-center mb-2">
+							<div class="text-center mb-2" id="error_sub">
 
-								<button disabled type="submit" id='submit' name="forminscription" class="btn btn-primary mb-4">S'inscrire</button>
+								<button type="submit" id='submit' name="forminscription" class="btn btn-primary mb-4">S'inscrire</button>
 
 
 
@@ -134,6 +134,9 @@ if (isset($_POST['forminscription'])) {
 
 
 	<script src="../includes/js/form_register.js"></script>
+	<script>
+		const register = new Register();
+	</script>
 
 
 </body>

@@ -38,31 +38,50 @@ class UserLog
 
     protected function _checkEmail()
     {
+        $regex = '/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/gm';
         $stmt = $this->_db->prepare('SELECT mail FROM utilisateurs WHERE mail=?');
         $stmt->execute(array($this->_email));
-        if ($stmt->rowCount() == 0) {
-            return true;
+        if ($stmt->rowCount() === 0) {
+            if ($this->_email !== '') {
+                if (preg_match($regex, $this->_email)) {
+                    return true;
+                }
+            }
         }
         return false;
     }
 
-    protected function _checkConfirmMail()
+    public function _checkConfirmMail()
     {
-        if ($this->_email == $this->_email_confirm) {
-            return true;
+        if ($this->_email_confirm !== '') {
+            if ($this->_email_confirm === $this->_email) {
+                return true;
+            }
         }
         return false;
     }
 
-    protected function _checkConfirmPassword()
+    public function _checkPass()
     {
-        if ($this->_password == $this->_password_confirm) {
-            return true;
+        $regex  = '^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/gm';
+        if ($this->_password !== '') {
+            if (preg_match($regex, $this->_password)) {
+                return true;
+            }
+        }
+    }
+
+    public function _checkConfirmPassword()
+    {
+        if ($this->_password_confirm !== '') {
+            if ($this->_password_confirm === $this->_password) {
+                return true;
+            }
         }
         return false;
     }
 
-    protected function _checkCredentials()
+    public function _checkCredentials()
     {
         if (
             !empty($this->_last_name) && !empty($this->_first_name) && !empty($this->_email) &&

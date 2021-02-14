@@ -1,47 +1,67 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Connexion</title>
+    <style>
+        .container-fluid {
+            height: 100vh;
+        }
+    </style>
 </head>
 
 <body>
-    <style>
-        .error {
-            display: block;
-        }
-    </style>
-
-    <script src="script.js"></script>
-
-    <section>
-        <article>
-            <div class="name" id="name_test">
-                <label for="name_input">Name</label>
-                <input type="text" id="name_input">
+    <div class="container-fluid">
+        <div class="row no-gutters justify-content-center align-item-center">
+            <div class="col-4">
+                <form>
+                    <div class="form-group">
+                        <label for="mail">email</label>
+                        <input type="mail" name="mail" class="form-control" id="mail" value="eve.holt@reqres.in" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="psw">Password</label>
+                        <input type="password" name="psw" class="form-control" id="psw" value="cityslicka" disabled>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="sendForm(mail.value, psw.value)">Connexion</button>
+                </form>
             </div>
-        </article>
-    </section>
+        </div>
+    </div>
     <script>
-        const div_name = document.getElementById('name_test'),
-            input = document.getElementById('name_input'),
-            span = document.createElement('span'),
-            br = document.createElement('br');
-        span.classList.toggle('error')
-        span.append('test');
-        input.addEventListener('keyup', () => {
-            if (input.value === '') {
-                div_name.append(span)
-            } else {
-                div_name.removeChild(span)
+        let users = []
+
+        const sendForm = (email, password) => {
+            setTimeout(() => {
+                const token = 'ffghthfzszsz654412dsvcds';
+                getList(token);
+            }, 2000)
+
+            const getList = (token) => {
+                const newXhr = new XMLHttpRequest();
+                newXhr.open('GET', 'https://reqres.in/api/users?page=1');
+                newXhr.setRequestHeader('Authorization', token);
+                newXhr.addEventListener('readystatechange', () => {
+                    if (newXhr.readyState === 4) {
+                        if (newXhr.status === 200) {
+                            users = JSON.parse(newXhr.response).data;
+                            console.log(users)
+                        } else {
+                            alert('Erreur user')
+                        }
+                    }
+                });
+                newXhr.send();
             }
-        });
-
-
-        ;
+        }
     </script>
 </body>
+
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 </html>
